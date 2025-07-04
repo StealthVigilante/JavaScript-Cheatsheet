@@ -1,0 +1,279 @@
+body {
+  background-color: wheat;
+  font-family: "Libertinus Mono", monospace;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: teal;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: wheat;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: grey;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px grey;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.header-container{
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header-title{
+    width: 95vw;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.body-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.all-song ,.card, .playlist{
+    height: 75vh;
+    background-color: teal;
+    border-radius: 2rem;
+    padding: 1rem;
+
+}
+.all-song span{
+    font-size: 1.17em;
+}
+
+
+
+
+.song{
+    background-color: wheat;
+    border-radius: 1.5rem;
+    margin:0.5rem;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.song:hover{
+    background-color: hsl(40, 19%, 55%);
+}
+
+.card{
+    display: grid;
+    
+    align-items: space-between;
+    justify-items: center;
+    align-items: center;
+}
+.song-display{
+    background-color: wheat;
+    width: 80%;
+    border-radius: 1.5rem;
+    padding: 0.75rem;
+}
+.song-image{
+    width: 100%;
+    height: 14rem;
+    background-color: black;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.song-image img{
+    height: 100%;
+}
+
+.song-info{
+    padding-left: 0.5rem;
+}
+.prevbutton,.nextbutton{
+    display: inline;
+    background-color: wheat;
+    padding: 0.75rem;
+    margin:0.25rem;
+    width: 50px;
+    border-radius: 0.5rem
+}
+.prevbutton:hover{
+    background-color: hsl(40, 19%, 55%);
+}
+.nextbutton:hover{
+    background-color: hsl(40, 19%, 55%);
+}
+
+.add-to-playlist{
+    background-color: wheat;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem
+}
+.add-to-playlist:hover{
+    background-color: hsl(40, 19%, 55%);
+}
+
+.audio-player{
+    margin:0.5rem;
+}
+
+.all-playlists div{
+    background-color: wheat;
+    border-radius: 1.5rem;
+    margin:0.5rem;
+    padding: 1rem;
+}
+.add-to-playlist div:hover{
+    background-color: hsl(40, 19%, 55%);
+}
+
+.remove{
+    background-color: teal;
+    
+    border-radius: 100%;
+    display: inline;
+    margin: 0;
+    padding: 0.3rem 0.75rem  0.3rem 0.75rem;
+}
+.remove:hover{
+    background-color: rgb(60, 93, 93);
+}
+
+.playlist{
+    max-height: 700px; 
+    overflow-y: auto;
+}
+
+.select-genre {
+    background-color: wheat;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.select-genre:hover {
+    background-color: hsl(40, 19%, 55%);
+}
+
+
+.playname {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    width: auto;
+    background-color: wheat;
+    outline: none;
+    
+}
+
+.playListCreateButton {
+    padding: 0.75rem 1rem;
+    background-color: wheat;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+    
+
+.playListCreateButton:hover {
+    background-color: hsl(40, 19%, 55%);
+}
+
+.inputToCreate{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:1rem;
+
+}
+
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .all-song,
+body.dark-mode .card,
+body.dark-mode .playlist {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .song,
+body.dark-mode .playListCreateButton,
+body.dark-mode .select-genre,
+body.dark-mode .playname,
+body.dark-mode .prevbutton,
+body.dark-mode .nextbutton,
+body.dark-mode .add-to-playlist,
+body.dark-mode .all-playlists div,
+body.dark-mode .song-display {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+body.dark-mode .audio-player{
+    color: #f0f0f0;
+}
+
+body.dark-mode .remove {
+  background-color: #666;
+}
+
+body.dark-mode .remove:hover,
+body.dark-mode .playListCreateButton:hover,
+body.dark-mode .select-genre:hover,
+body.dark-mode .prevbutton:hover,
+body.dark-mode .nextbutton:hover,
+body.dark-mode .add-to-playlist:hover,
+body.dark-mode .song:hover {
+  background-color: #555;
+}

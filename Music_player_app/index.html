@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="header-title">Music player</h1>
+
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+    <body>
+        <div class="body-container">
+            <div class="all-song">
+                <span>Filter by genre</span>
+                <select class="select-genre">
+                    <option value="all">all</option>
+                </select>
+                <h2>All Songs</h2>
+                <div class="songs-available">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="song-display">
+                    <div class="song-image">
+                        <img src="">
+                    </div>
+                    <div class="song-info">
+                        <h3 class="Song-name"></h3>
+                        <p class="Author-name"></p>
+                    </div>
+                </div>
+
+                <div class="audio-player"><audio controls></audio></div>
+                <div class="back-front-buttons">
+                    <div class="prevbutton">Prev</div>
+                    <div class="nextbutton">Next</div>
+                </div>
+                <div class="add-playlist">
+                    <div class="add-to-playlist">Add to playlist</div>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <div class="inputToCreate">
+                    <input class="playname"  type="text" placeholder="New playlist name">
+                    <button class="playListCreateButton">Create</button>
+                </div>
+                
+                <h2>Current Playlist</h2>
+                <div class="Current-playlist"></div>
+                <h2>All playlist</h2>
+                <div class="all-playlists"></div>
+
+
+            </div>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
